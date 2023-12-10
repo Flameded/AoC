@@ -33,8 +33,8 @@ for mapping_info in inp[1:]:
 
             for xlo, xhi in all_3_ranges:
 
-                # Get rid of the ones we do not care about (anything outside of the original range)
-                if xlo < lo or xhi > hi:
+                # Get rid of the ones we do not care about (anything outside of the original range or not a valid range)
+                if xlo < lo or xhi > hi or xlo == xhi:
                     continue
 
                 if source_start <= xlo and xhi <= source_end:
