@@ -20,6 +20,6 @@ for i in range(65 + 131 * 2):
 
 x0, x1, x2 = [totals[65 + 131*i] for i in range(3)]
 diff_2nd = (x2 - x1) - (x1 - x0)
-nth_term = lambda n: x0 + n*(n+1)//2 * diff_2nd
+nth_term = lambda n: x0 + n*(n+1)//2 * diff_2nd + n * ((x1 - x0) - diff_2nd)
 
 print(nth_term(26501365 // 131))
